@@ -1,0 +1,26 @@
+{
+  "name": "pdftesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:visual": "npx playwright test pdf-visual-regression.spec.ts --grep=\"Visual Regression Tests\"",
+    "test:visual-update": "npx playwright test pdf-visual-regression.spec.ts --grep=\"Visual Regression Tests\" --update-snapshots",
+    "test:baselines": "npx playwright test pdf-visual-regression.spec.ts --grep=\"Create all baselines\" --update-snapshots",
+    "test:content": "npx playwright test pdf-content-extraction.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.7.0",
+    "@types/pdf-parse": "^1.1.5"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^2.2.0"
+  }
+}
